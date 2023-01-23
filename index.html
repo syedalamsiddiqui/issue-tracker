@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Issue Tracker</h1>
+        <div class="new-issue-form">
+            <h3>Add New Issue</h3>
+            <form id="issue-form" action="#current-issues">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Enter the title for issue..." required>
+                <label for="description">Description</label>
+                <input type="text" id="description" placeholder="Desrcibe the issue..." required>
+                <label for="severity">Severity</label>
+                <select name="severity" id="severity" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <label for="assigned-to">Assigned To</label>
+                <input type="text" id="assigned-to" placeholder="Enter responsible..." required>
+                <button class="btn" id="btn-add" type="submit">Add</button>
+            </form>
+        </div>
+        <hr>
+        <h2 id="current-issues">Current Issues</h2>
+        <div class="issues-container">
+            <div class="issue-state" id="new-state">
+                <div class="sticky-div"><h3>New</h3></div>
+                <!-- <div class="issue-card">
+                    <p class="card-text">Issue ID. 738493uef4u84394384827847</p>
+                    <div class="open">Open</div>
+                    <h4>Title of Issue</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, accusamus
+                        fugit sunt impedit reiciendis exercitationem ducimus nobis aspernatur dolor distinctio!</p>
+                    <p class="card-text"><b>Severity:</b> low</p>
+                    <p class="card-text"> <b>Assigned to:</b> Syed</p>
+                    <div class="action-palette">
+                        <div class="prev-btn"><i id="previous" class="fa-solid fa-arrow-left-long"></i></div>
+                        <div class="close">Close</div>
+                        <div class="delete">Delete</div>
+                        <div class="next-btn"><i id="next" class="fa-solid fa-arrow-right-long"></i></div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="issue-state" id="development-state">
+                <div class="sticky-div"><h3>In Development</h3></div>
+
+            </div>
+            <div class="issue-state" id="qa-state">
+                <div class="sticky-div"><h3>QA</h3></div>
+            </div>
+            <div class="issue-state" id="done-state">
+                <div class="sticky-div"><h3>Done</h3></div>
+            </div>
+        </div>
+        <hr>
+        <h2 id="closed-issues">Closed Issues</h2>
+        <div class="issues-container" id="closed-issues-container">
+
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/906b3f56ce.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
